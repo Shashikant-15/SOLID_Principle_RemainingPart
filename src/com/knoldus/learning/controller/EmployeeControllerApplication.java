@@ -9,9 +9,15 @@ import com.knoldus.learning.service.LetsValidate_Employee_Service_Implement;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-
+    /**
+     * Represents a EmployeeController to read file.
+     * A EmployeeController can have different entity such as employeeId.
+     */
 public class EmployeeControllerApplication {
-
+    /**
+     *  main method called to implement EmployeeController .
+     * @param a used as arguments passes to method 
+     */
     public static void main(String[] a) {
         LetsValidate_EmployeeService validateEmployeeService = new LetsValidate_Employee_Service_Implement();
         Save_Employee_Service save_emplservice = new Save_Employee_Service_Implement();
@@ -24,7 +30,7 @@ public class EmployeeControllerApplication {
         // -1,Jiten
         // 2,Ram
 
-//        loop has been replaced by csv file
+        //   loop has been replaced by csv file
         File newfile = new File("src/com/knoldus/learning/controller/emplName.csv");
 
         String line;
@@ -41,13 +47,13 @@ public class EmployeeControllerApplication {
 
             System.out.println("Total employee size  :  " + employeeList.size());
 
-            //employeeList iterate and call validate service, then save.
+            // employeeList iterate and call validate service, then save.
             for (Employee emp : employeeList) {
                 if (validateEmployeeService.validateEmployee(emp))
                     save_emplservice.saveEmployee(emp);
 
             }
-//       Now error removed
+           //   Now error removed
                 System.out.println("Saved employee  : " + save_emplservice.getEmployeeCount());
             } catch (IOException e) {
                 e.printStackTrace();
