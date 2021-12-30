@@ -1,7 +1,13 @@
 package com.knoldus.learning.SOLID_Principle_Explain;
 
-//Here I am implementing all the five principles of SOLID
+ /**
+ *Here I am implementing all the five principles of SOLID using MainVehicleClass
+ */
 class MainVehicleClass {
+    /**
+     *  main method called to implement Vehicle  associated with Vehicle Types.
+     * @param args arguments passes to method
+     */
     public static void main(String[] args) {
         Vehicle car = new Maruti400();
         car.start();
@@ -14,12 +20,18 @@ public interface Vehicle {
     void start();
 }
 
-//For engine vehicles
+
+ /** 
+ * interface  For engine vehicles
+ */
  interface EngineVehicle extends Vehicle{
     void start();
 }
 
-//For non engine vehicle
+
+/** 
+ * interface For non engine vehicle
+ */
 interface NonEngineVehicle extends Vehicle{
     void start();
 }
