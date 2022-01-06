@@ -1,9 +1,15 @@
 package com.knoldus.learning.solid;
-
+     /**
+     * Represents a Vehicle having different  types.
+     */
 public class Vehicle {
     public void startEngine() throws Exception {
         System.out.println("Engine started");
     }
+     /**
+     * main method called from here
+     * @param a reperesents arguments in main class
+     */
     public static void main(String [] a) throws Exception {
         Vehicle veh = new Maruti400();
         veh.startEngine();
@@ -16,13 +22,18 @@ public class Vehicle {
 
     }
 }
-
+    /**
+     * Represents a Maruti400 having Engine type Vehicle
+     */
 class Maruti400 extends EngineVehicle{
     @Override
     public void startEngine() throws Exception{
         super.startEngine();
     }
 }
+    /**
+     * Represents a JCB having Engine type Vehicle
+     */
 class JCB extends EngineVehicle{
     @Override
     public void startEngine() throws Exception{
